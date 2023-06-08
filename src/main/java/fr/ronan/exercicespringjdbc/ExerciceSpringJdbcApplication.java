@@ -70,6 +70,7 @@ public class ExerciceSpringJdbcApplication {
         );
         System.out.println("J'ai un nombre de clients à : "
                 + resultat);
+
         // nombre de clients qui ont passé au moins une commande
         Integer nbCliCmd = jdbcTemplate.queryForObject(
                 "select count(distinct nom_client, prenom_client)" +
@@ -85,7 +86,7 @@ public class ExerciceSpringJdbcApplication {
                 new Date(), "Bolt", "Hussein", new Date().getTime());
         System.out.println("Résultat de l'ajout : " + res);
 
-        String motif = "%ar%";
+        String motif = "%r%";
         Map<String, Object> params = Map.of("motif", motif);
         // var params = new MapSqlParameterSource();
         // params.addValue("motif", motif);
@@ -101,7 +102,6 @@ public class ExerciceSpringJdbcApplication {
         Client client = new Client();
         client.setNom("Richard");
         client.setPrenom("Second");
-
         var source =
                 new BeanPropertySqlParameterSource(client);
         int nbCmdCli = namedParameterJdbcTemplate
@@ -121,14 +121,12 @@ public class ExerciceSpringJdbcApplication {
             Client client0 = new Client();
             client0.setNom(rs.getString(1));
             client0.setPrenom(rs.getString(2));
-
 			/*int nbMax = rs.getMetaData().getColumnCount();
 			for (int i=1; i<=nbMax; i++) {
 				System.out.println(
 						rs.getMetaData().getColumnName(i)
 				);
 			}*/
-
             return client0;
         };
         Client resultatC = jdbcTemplate.queryForObject(
