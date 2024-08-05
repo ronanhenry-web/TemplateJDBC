@@ -1,4 +1,4 @@
-<h1 align="left">Projet Java / Objectif utiliser le template JDBC</h1>
+<h1 align="left">Projet Java / Objectif consolider mes connaissances sur JDBC, JDBC Template, les transactions et les exceptions</h1>
 
 <h3 align="left">Installation : cloner le projet puis lancer un IDE IntelliJ et pour Run l'application suivre les étapes suivantes :  
 
