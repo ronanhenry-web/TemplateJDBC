@@ -1,4 +1,4 @@
-# Projet Java
+# Projet Template JDBC
 
 Objectif consolider mes connaissances sur JDBC, JDBC Template, les transactions et les exceptions
 
